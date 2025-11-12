@@ -1,0 +1,7 @@
+/learncode-backend/node_modules
+/learncode-backend/dist
+/learncode-frontend/node_modules
+/learncode-frontend/build
+/learncode-frontend/dist
+/learncode-frontend/.env
+/learncode-backend/.env
