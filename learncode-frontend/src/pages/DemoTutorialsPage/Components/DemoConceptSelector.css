@@ -6,30 +6,30 @@
 }
 
 .tutorials-page.light-mode .concept-selector {
-  border-bottom: 2px solid #E5E7EB;
+  border-bottom: 2px solid #e5e7eb;
 }
 
 .concept-selector h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #F9FAFB;
+  color: #f9fafb;
   margin-bottom: 4px;
   transition: color 0.3s ease;
 }
 
 .tutorials-page.light-mode .concept-selector h3 {
-  color: #1E1E2D;
+  color: #1e1e2d;
 }
 
 .concept-subtitle {
   font-size: 0.85rem;
-  color: #71717A;
+  color: #71717a;
   margin-bottom: 12px;
   transition: color 0.3s ease;
 }
 
 .tutorials-page.light-mode .concept-subtitle {
-  color: #6B7280;
+  color: #6b7280;
 }
 
 .concepts-list {
@@ -49,60 +49,60 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
-  color: #94A3B8;
+  color: #94a3b8;
   font-size: 0.95rem;
   text-align: left;
 }
 
 .concept-btn:hover {
-  border-color: #A5B4FC;
+  border-color: #a5b4fc;
   background: #475569;
-  color: #C7D2FE;
+  color: #c7d2fe;
   transform: translateX(4px);
 }
 
 .concept-btn.active {
-  border-color: #A5B4FC;
-  background: linear-gradient(135deg, #818CF8 0%, #A5B4FC 100%);
+  border-color: #a5b4fc;
+  background: linear-gradient(135deg, #818cf8 0%, #a5b4fc 100%);
   color: white;
   box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);
 }
 
 .tutorials-page.light-mode .concept-btn {
-  background: #FFFFFF;
-  color: #6B7280;
-  border-color: #E5E7EB;
+  background: #ffffff;
+  color: #6b7280;
+  border-color: #e5e7eb;
 }
 
 .tutorials-page.light-mode .concept-btn:hover {
-  background: #F9FAFB;
-  border-color: #8B84F7;
+  background: #f9fafb;
+  border-color: #8b84f7;
 }
 
 .concept-info {
   margin-top: 15px;
   padding: 12px;
   background: #475569;
-  border-left: 4px solid #818CF8;
+  border-left: 4px solid #818cf8;
   border-radius: 4px;
   transition: background 0.3s ease;
 }
 
 .tutorials-page.light-mode .concept-info {
-  background: #F0F9FF;
-  border-left: 4px solid #6C63FF;
+  background: #f0f9ff;
+  border-left: 4px solid #6c63ff;
 }
 
 .info-text {
   font-size: 0.85rem;
-  color: #A5B4FC;
+  color: #a5b4fc;
   margin: 0;
   line-height: 1.4;
   transition: color 0.3s ease;
 }
 
 .tutorials-page.light-mode .info-text {
-  color: #0C4A6E;
+  color: #0c4a6e;
 }
 
 @media (max-width: 480px) {

@@ -1,24 +1,24 @@
 .tutorials-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0F172A 0%, #1A2747 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1a2747 100%);
   padding: 20px;
   transition: background 0.3s ease;
 }
 
 .tutorials-page.light-mode {
-  background: linear-gradient(135deg, #F8F9FB 0%, #F0F2F7 100%);
+  background: linear-gradient(135deg, #f8f9fb 0%, #f0f2f7 100%);
 }
 
 .tutorials-header {
   text-align: center;
-  color: #F9FAFB;
+  color: #f9fafb;
   margin-bottom: 30px;
   animation: slideDown 0.6s ease-out;
   transition: color 0.3s ease;
 }
 
 .tutorials-page.light-mode .tutorials-header {
-  color: #1E1E2D;
+  color: #1e1e2d;
 }
 
 .tutorials-header h1 {
@@ -53,12 +53,12 @@
 }
 
 .tutorials-page.dark-mode .tutorials-sidebar {
-  background: #1E293B;
+  background: #1e293b;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .tutorials-page.light-mode .tutorials-sidebar {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -74,12 +74,12 @@
 }
 
 .tutorials-page.dark-mode .tutorials-content {
-  background: #1E293B;
+  background: #1e293b;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .tutorials-page.light-mode .tutorials-content {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -88,17 +88,17 @@
   align-items: center;
   justify-content: center;
   height: 400px;
-  color: #9CA3AF;
+  color: #9ca3af;
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
 .tutorials-page.dark-mode .tutorials-empty-state {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 .tutorials-page.light-mode .tutorials-empty-state {
-  color: #6B7280;
+  color: #6b7280;
 }
 
 @keyframes slideDown {
@@ -142,14 +142,14 @@
 
 .tutorials-sidebar::-webkit-scrollbar-track,
 .tutorials-content::-webkit-scrollbar-track {
-  background: #0F172A;
+  background: #0f172a;
   border-radius: 10px;
   transition: background 0.3s ease;
 }
 
 .tutorials-page.light-mode .tutorials-sidebar::-webkit-scrollbar-track,
 .tutorials-page.light-mode .tutorials-content::-webkit-scrollbar-track {
-  background: #F0F2F7;
+  background: #f0f2f7;
 }
 
 .tutorials-sidebar::-webkit-scrollbar-thumb,
@@ -161,12 +161,12 @@
 
 .tutorials-page.light-mode .tutorials-sidebar::-webkit-scrollbar-thumb,
 .tutorials-page.light-mode .tutorials-content::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #cbd5e1;
 }
 
 .tutorials-sidebar::-webkit-scrollbar-thumb:hover,
 .tutorials-content::-webkit-scrollbar-thumb:hover {
-  background: #64748B;
+  background: #64748b;
 }
 
 @media (max-width: 1024px) {

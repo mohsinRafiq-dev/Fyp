@@ -6,19 +6,19 @@
 }
 
 .tutorials-page.light-mode .language-selector {
-  border-bottom: 2px solid #E5E7EB;
+  border-bottom: 2px solid #e5e7eb;
 }
 
 .language-selector h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #F9FAFB;
+  color: #f9fafb;
   margin-bottom: 12px;
   transition: color 0.3s ease;
 }
 
 .tutorials-page.light-mode .language-selector h3 {
-  color: #1E1E2D;
+  color: #1e1e2d;
 }
 
 .language-buttons {
@@ -38,33 +38,33 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 .language-btn:hover {
-  border-color: #818CF8;
+  border-color: #818cf8;
   background: #475569;
-  color: #A5B4FC;
+  color: #a5b4fc;
   transform: translateX(4px);
 }
 
 .language-btn.active {
-  border-color: #818CF8;
-  background: linear-gradient(135deg, #818CF8 0%, #A5B4FC 100%);
+  border-color: #818cf8;
+  background: linear-gradient(135deg, #818cf8 0%, #a5b4fc 100%);
   color: white;
   box-shadow: 0 4px 12px rgba(129, 140, 248, 0.4);
 }
 
 .tutorials-page.light-mode .language-btn {
-  background: #FFFFFF;
-  color: #6B7280;
-  border-color: #E5E7EB;
+  background: #ffffff;
+  color: #6b7280;
+  border-color: #e5e7eb;
 }
 
 .tutorials-page.light-mode .language-btn:hover {
-  background: #F9FAFB;
-  border-color: #6C63FF;
-  color: #6C63FF;
+  background: #f9fafb;
+  border-color: #6c63ff;
+  color: #6c63ff;
 }
 
 .language-icon {
