@@ -21,48 +21,120 @@ export const languageOptions: LanguageOption[] = [
   {
     id: "javascript",
     name: "JavaScript",
-    defaultCode: `// JavaScript with Input Example
-process.stdin.on('data', (data) => {
-    const name = data.toString().trim();
-    console.log('Hello, ' + name + '!');
-    process.exit(0);
-});
+    defaultCode: `// Functions and Loops Example in JavaScript
 
-// Leave input empty to be prompted, or provide input above`,
+// Function to calculate factorial
+function factorial(n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
+}
+
+// Function to print multiplication table
+function multiplicationTable(num) {
+    console.log(\`Multiplication Table of \${num}:\`);
+    for (let i = 1; i <= 10; i++) {
+        console.log(\`\${num} x \${i} = \${num * i}\`);
+    }
+}
+
+// Using loops to sum numbers
+console.log("Sum of numbers 1 to 10:");
+let sum = 0;
+for (let i = 1; i <= 10; i++) {
+    sum += i;
+}
+console.log("Total: " + sum);
+
+// Using while loop
+console.log("\\nCounting down from 5:");
+let count = 5;
+while (count > 0) {
+    console.log(count);
+    count--;
+}
+
+// Using functions
+console.log("\\nFactorial of 5: " + factorial(5));
+multiplicationTable(7);`,
   },
   {
     id: "python",
     name: "Python",
-    defaultCode: `# Python with Input Example
-name = input("What's your name? ")
-age = input("What's your age? ")
-print(f"Hello {name}, you are {age} years old!")
+    defaultCode: `# Functions and Loops Example in Python
 
-# Leave input empty to be prompted interactively!`,
+# Function to calculate factorial
+def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)
+
+# Function to print multiplication table
+def multiplication_table(num):
+    print(f"Multiplication Table of {num}:")
+    for i in range(1, 11):
+        print(f"{num} x {i} = {num * i}")
+
+# Using loops to sum numbers
+print("Sum of numbers 1 to 10:")
+total = 0
+for i in range(1, 11):
+    total += i
+print(f"Total: {total}")
+
+# Using while loop
+print("\\nCounting down from 5:")
+count = 5
+while count > 0:
+    print(count)
+    count -= 1
+
+# Using functions
+print(f"\\nFactorial of 5: {factorial(5)}")
+multiplication_table(7)`,
   },
   {
     id: "cpp",
     name: "C++",
     defaultCode: `#include <iostream>
-#include <string>
 using namespace std;
 
-int main() {
-    string name;
-    int age;
-    
-    cout << "What's your name? ";
-    cin >> name;
-    
-    cout << "What's your age? ";
-    cin >> age;
-    
-    cout << "Hello " << name << ", you are " << age << " years old!" << endl;
-    
-    return 0;
+// Function to calculate factorial
+int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
 }
 
-// Leave input empty to be prompted interactively!`,
+// Function to print multiplication table
+void multiplicationTable(int num) {
+    cout << "Multiplication Table of " << num << ":" << endl;
+    for (int i = 1; i <= 10; i++) {
+        cout << num << " x " << i << " = " << (num * i) << endl;
+    }
+}
+
+int main() {
+    // Using loops to sum numbers
+    cout << "Sum of numbers 1 to 10:" << endl;
+    int sum = 0;
+    for (int i = 1; i <= 10; i++) {
+        sum += i;
+    }
+    cout << "Total: " << sum << endl;
+
+    // Using while loop
+    cout << "\\nCounting down from 5:" << endl;
+    int count = 5;
+    while (count > 0) {
+        cout << count << endl;
+        count--;
+    }
+
+    // Using functions
+    cout << "\\nFactorial of 5: " << factorial(5) << endl;
+    multiplicationTable(7);
+
+    return 0;
+}`,
   },
 ];
 
