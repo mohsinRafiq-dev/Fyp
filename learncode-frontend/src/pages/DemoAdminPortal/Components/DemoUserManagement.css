@@ -14,12 +14,22 @@
   font-size: 24px;
   font-weight: 700;
   color: #f1f5f9;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .management-header h2 {
+  color: #1e293b;
 }
 
 .management-header p {
   margin: 0;
   font-size: 14px;
   color: #94a3b8;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .management-header p {
+  color: #64748b;
 }
 
 /* Filters Section */
@@ -57,6 +67,22 @@
   color: #64748b;
 }
 
+.demo-admin-portal.light-mode .search-input {
+  background: rgba(51, 65, 85, 0.05);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  color: #1e293b;
+}
+
+.demo-admin-portal.light-mode .search-input:focus {
+  background: rgba(51, 65, 85, 0.1);
+  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.05);
+}
+
+.demo-admin-portal.light-mode .search-input::placeholder {
+  color: #94a3b8;
+}
+
 .filter-controls {
   display: flex;
   gap: 12px;
@@ -89,12 +115,39 @@
   color: #f1f5f9;
 }
 
+.demo-admin-portal.light-mode .filter-select {
+  background: rgba(51, 65, 85, 0.05);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  color: #1e293b;
+}
+
+.demo-admin-portal.light-mode .filter-select:hover {
+  background: rgba(51, 65, 85, 0.1);
+}
+
+.demo-admin-portal.light-mode .filter-select:focus {
+  background: rgba(51, 65, 85, 0.1);
+  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.05);
+}
+
+.demo-admin-portal.light-mode .filter-select option {
+  background: #ffffff;
+  color: #1e293b;
+}
+
 /* Table Container */
 .table-container {
   overflow-x: auto;
   border-radius: 10px;
   background: rgba(148, 163, 184, 0.03);
   border: 1px solid rgba(148, 163, 184, 0.1);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .table-container {
+  background: rgba(51, 65, 85, 0.02);
+  border: 1px solid rgba(51, 65, 85, 0.1);
 }
 
 .users-table {
@@ -106,6 +159,12 @@
 .users-table thead {
   background: rgba(102, 126, 234, 0.1);
   border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+  transition: background 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .users-table thead {
+  background: rgba(102, 126, 234, 0.05);
+  border-bottom: 2px solid rgba(102, 126, 234, 0.1);
 }
 
 .users-table th {
@@ -116,6 +175,11 @@
   color: #cbd5e1;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .users-table th {
+  color: #475569;
 }
 
 .users-table td {
@@ -123,6 +187,12 @@
   border-bottom: 1px solid rgba(148, 163, 184, 0.1);
   font-size: 14px;
   color: #cbd5e1;
+  transition: background-color 0.2s ease, color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .users-table td {
+  border-bottom: 1px solid rgba(51, 65, 85, 0.1);
+  color: #475569;
 }
 
 .users-table tbody tr {
@@ -131,6 +201,10 @@
 
 .users-table tbody tr:hover {
   background: rgba(102, 126, 234, 0.1);
+}
+
+.demo-admin-portal.light-mode .users-table tbody tr:hover {
+  background: rgba(102, 126, 234, 0.05);
 }
 
 /* User Name Cell */
@@ -181,6 +255,22 @@
   color: #f1f5f9;
 }
 
+.demo-admin-portal.light-mode .role-select {
+  background: rgba(51, 65, 85, 0.05);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  color: #1e293b;
+}
+
+.demo-admin-portal.light-mode .role-select:hover {
+  background: rgba(51, 65, 85, 0.1);
+  border-color: rgba(51, 65, 85, 0.3);
+}
+
+.demo-admin-portal.light-mode .role-select option {
+  background: #ffffff;
+  color: #1e293b;
+}
+
 /* Status Select */
 .status-select {
   padding: 8px 12px;
@@ -217,6 +307,22 @@
   color: #f1f5f9;
 }
 
+.demo-admin-portal.light-mode .status-select {
+  background: rgba(51, 65, 85, 0.05);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  color: #1e293b;
+}
+
+.demo-admin-portal.light-mode .status-select:hover {
+  background: rgba(51, 65, 85, 0.1);
+  border-color: rgba(51, 65, 85, 0.3);
+}
+
+.demo-admin-portal.light-mode .status-select option {
+  background: #ffffff;
+  color: #1e293b;
+}
+
 /* Delete Button */
 .delete-btn {
   padding: 6px 12px;
@@ -236,6 +342,18 @@
   color: #f87171;
 }
 
+.demo-admin-portal.light-mode .delete-btn {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #dc2626;
+}
+
+.demo-admin-portal.light-mode .delete-btn:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #b91c1c;
+}
+
 /* No Data */
 .no-data {
   display: flex;
@@ -244,6 +362,11 @@
   min-height: 300px;
   color: #94a3b8;
   font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .no-data {
+  color: #64748b;
 }
 
 /* Pagination */
@@ -275,6 +398,17 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-color: transparent;
   color: #fff;
+}
+
+.demo-admin-portal.light-mode .page-btn {
+  background: rgba(51, 65, 85, 0.05);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  color: #475569;
+}
+
+.demo-admin-portal.light-mode .page-btn:hover {
+  background: rgba(51, 65, 85, 0.1);
+  border-color: rgba(51, 65, 85, 0.3);
 }
 
 /* Responsive */

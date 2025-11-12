@@ -15,6 +15,11 @@
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 2px solid #e5e7eb;
+  transition: border-color 0.3s ease;
+}
+
+.tutorials-page.light-mode .viewer-header {
+  border-bottom: 2px solid #e2e8f0;
 }
 
 .header-top {
@@ -29,6 +34,11 @@
   margin: 0;
   color: #1f2937;
   font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .viewer-header h2 {
+  color: #1e293b;
 }
 
 .save-tutorial-btn {
@@ -73,9 +83,15 @@
   border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .language-badge {
+  background: #dbeafe;
+  color: #0c4a6e;
+}
+
+.tutorials-page.light-mode .language-badge {
   background: #dbeafe;
   color: #0c4a6e;
 }
@@ -89,11 +105,21 @@
   color: #4c1d95;
 }
 
+.tutorials-page.light-mode .concept-badge {
+  background: #ddd6fe;
+  color: #4c1d95;
+}
+
 .tutorial-description {
   margin: 0;
   color: #6b7280;
   font-size: 1rem;
   line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .tutorial-description {
+  color: #64748b;
 }
 
 .viewer-content {
@@ -114,18 +140,33 @@
   color: #1f2937;
   font-size: 1.2rem;
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .content-section h3 {
+  color: #1e293b;
 }
 
 .content-section h4 {
   margin: 12px 0 8px 0;
   color: #374151;
   font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .content-section h4 {
+  color: #334155;
 }
 
 .content-text {
   line-height: 1.7;
   color: #4b5563;
   font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .content-text {
+  color: #475569;
 }
 
 .content-text p {
@@ -161,6 +202,12 @@
   color: #374151;
   font-size: 0.9rem;
   line-height: 1.4;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tutorials-page.light-mode .notes-list li {
+  background: #f8fafc;
+  color: #334155;
 }
 
 .tips-list li {
@@ -168,11 +215,21 @@
   background: #faf5ff;
 }
 
+.tutorials-page.light-mode .tips-list li {
+  background: #faf5ff;
+  color: #334155;
+}
+
 /* Code Examples Section */
 .code-examples-section {
   background: #f9fafb;
   padding: 20px;
   border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.tutorials-page.light-mode .code-examples-section {
+  background: #f8fafc;
 }
 
 .examples-selector {
@@ -204,26 +261,56 @@
   color: white;
 }
 
+.tutorials-page.light-mode .example-btn {
+  background: white;
+  color: #6b7280;
+  border-color: #e5e7eb;
+}
+
+.tutorials-page.light-mode .example-btn:hover {
+  background: #f8fafc;
+}
+
 .example-viewer {
   background: white;
   border-radius: 8px;
   overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.tutorials-page.light-mode .example-viewer {
+  background: white;
 }
 
 .example-header {
   padding: 16px;
   border-bottom: 2px solid #e5e7eb;
+  transition: border-color 0.3s ease;
+}
+
+.tutorials-page.light-mode .example-header {
+  border-bottom: 2px solid #e2e8f0;
 }
 
 .example-header h4 {
   margin: 0 0 6px 0;
   color: #1f2937;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .example-header h4 {
+  color: #1e293b;
 }
 
 .example-header p {
   margin: 0;
   color: #6b7280;
   font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .example-header p {
+  color: #64748b;
 }
 
 .code-container {
@@ -231,13 +318,25 @@
   background: #1f2937;
   padding: 16px;
   overflow-x: auto;
+  transition: background 0.3s ease;
+}
+
+.tutorials-page.light-mode .code-container {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .code-container code {
   color: #e5e7eb;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.9rem;
   line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .code-container code {
+  color: #1e293b;
 }
 
 .copy-btn {
@@ -259,9 +358,22 @@
   transform: scale(1.05);
 }
 
+.tutorials-page.light-mode .copy-btn {
+  background: #667eea;
+}
+
+.tutorials-page.light-mode .copy-btn:hover {
+  background: #5568d3;
+}
+
 .output-section {
   padding: 16px;
   border-top: 2px solid #e5e7eb;
+  transition: border-color 0.3s ease;
+}
+
+.tutorials-page.light-mode .output-section {
+  border-top: 2px solid #e2e8f0;
 }
 
 .output-toggle {
@@ -281,6 +393,14 @@
   color: #764ba2;
 }
 
+.tutorials-page.light-mode .output-toggle {
+  color: #667eea;
+}
+
+.tutorials-page.light-mode .output-toggle:hover {
+  color: #764ba2;
+}
+
 .output-display {
   margin-top: 12px;
   padding: 12px;
@@ -288,9 +408,15 @@
   border-left: 4px solid #667eea;
   border-radius: 4px;
   color: #0c4a6e;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.9rem;
   overflow-x: auto;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tutorials-page.light-mode .output-display {
+  background: #f0f9ff;
+  color: #0c4a6e;
 }
 
 .action-buttons {
@@ -298,6 +424,11 @@
   gap: 10px;
   padding: 16px;
   border-top: 2px solid #e5e7eb;
+  transition: border-color 0.3s ease;
+}
+
+.tutorials-page.light-mode .action-buttons {
+  border-top: 2px solid #e2e8f0;
 }
 
 .try-btn,
@@ -312,7 +443,19 @@
   transition: all 0.3s ease;
 }
 
+.tutorials-page.light-mode .try-btn,
+.tutorials-page.light-mode .ai-btn {
+  background: white;
+  border-color: #e5e7eb;
+}
+
 .try-btn:hover {
+  border-color: #10b981;
+  background: #f0fdf4;
+  color: #10b981;
+}
+
+.tutorials-page.light-mode .try-btn:hover {
   border-color: #10b981;
   background: #f0fdf4;
   color: #10b981;
@@ -324,6 +467,12 @@
   color: #667eea;
 }
 
+.tutorials-page.light-mode .ai-btn:hover {
+  border-color: #667eea;
+  background: #f8fafc;
+  color: #667eea;
+}
+
 /* Tags */
 .viewer-tags {
   display: flex;
@@ -332,6 +481,11 @@
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 2px solid #e5e7eb;
+  transition: border-color 0.3s ease;
+}
+
+.tutorials-page.light-mode .viewer-tags {
+  border-bottom: 2px solid #e2e8f0;
 }
 
 .tag {
@@ -342,6 +496,12 @@
   color: #6b7280;
   font-size: 0.85rem;
   font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tutorials-page.light-mode .tag {
+  background: #f8fafc;
+  color: #64748b;
 }
 
 /* AI Generation CTA */
@@ -351,6 +511,12 @@
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.tutorials-page.light-mode .ai-generation-cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
 }
 
 .ai-generation-cta p {
@@ -372,6 +538,15 @@
 .cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tutorials-page.light-mode .cta-btn {
+  background: white;
+  color: #667eea;
+}
+
+.tutorials-page.light-mode .cta-btn:hover {
+  background: #f8fafc;
 }
 
 @media (max-width: 768px) {
@@ -397,5 +572,22 @@
     min-width: 0;
     font-size: 0.85rem;
     padding: 6px 10px;
+  }
+
+  .tutorials-page.light-mode .example-btn {
+    background: white;
+  }
+
+  .save-tutorial-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .viewer-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .tutorials-page.light-mode .viewer-header h2 {
+    color: #1e293b;
   }
 }

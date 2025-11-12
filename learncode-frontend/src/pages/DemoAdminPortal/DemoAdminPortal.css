@@ -1,25 +1,77 @@
 /* Admin Portal Main Styling */
+:root {
+  /* Dark Mode Colors */
+  --bg-primary-dark: #1e293b;
+  --bg-secondary-dark: #0f172a;
+  --bg-tertiary-dark: #1a2744;
+  --text-primary-dark: #e2e8f0;
+  --text-secondary-dark: #cbd5e1;
+  --text-tertiary-dark: #94a3b8;
+  --border-dark: rgba(148, 163, 184, 0.1);
+  --border-hover-dark: rgba(148, 163, 184, 0.25);
+
+  /* Light Mode Colors */
+  --bg-primary-light: #ffffff;
+  --bg-secondary-light: #f8fafc;
+  --bg-tertiary-light: #f1f5f9;
+  --text-primary-light: #1e293b;
+  --text-secondary-light: #475569;
+  --text-tertiary-light: #64748b;
+  --border-light: rgba(51, 65, 85, 0.1);
+  --border-hover-light: rgba(51, 65, 85, 0.2);
+
+  /* Accent Colors - Common */
+  --accent-primary: #667eea;
+  --accent-primary-dark: #764ba2;
+  --accent-error: #ef4444;
+}
+
 .demo-admin-portal {
   display: flex;
   height: 100vh;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  background: linear-gradient(
+    135deg,
+    var(--bg-primary-dark) 0%,
+    var(--bg-secondary-dark) 100%
+  );
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  color: #e2e8f0;
+  color: var(--text-primary-dark);
   overflow: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode {
+  background: linear-gradient(
+    135deg,
+    var(--bg-primary-light) 0%,
+    var(--bg-secondary-light) 100%
+  );
+  color: var(--text-primary-light);
 }
 
 /* Sidebar */
 .demo-admin-sidebar {
   width: 280px;
-  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-  border-right: 1px solid rgba(148, 163, 184, 0.1);
+  background: linear-gradient(
+    180deg,
+    var(--bg-primary-dark) 0%,
+    var(--bg-secondary-dark) 100%
+  );
+  border-right: 1px solid var(--border-dark);
   padding: 24px 16px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .demo-admin-sidebar {
+  background: var(--bg-primary-light);
+  border-right: 1px solid var(--border-light);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
 .demo-admin-logo {
@@ -29,6 +81,11 @@
   margin-bottom: 32px;
   padding-bottom: 20px;
   border-bottom: 2px solid rgba(148, 163, 184, 0.15);
+  transition: border-color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .demo-admin-logo {
+  border-bottom: 2px solid var(--border-light);
 }
 
 .logo-icon {
@@ -83,9 +140,35 @@
 }
 
 .nav-item.active {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.2),
+    rgba(118, 75, 162, 0.2)
+  );
   border: 1px solid rgba(102, 126, 234, 0.5);
   color: #e0e7ff;
+}
+
+.demo-admin-portal.light-mode .nav-item {
+  background: rgba(51, 65, 85, 0.05);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary-light);
+}
+
+.demo-admin-portal.light-mode .nav-item:hover {
+  background: rgba(51, 65, 85, 0.1);
+  border-color: var(--border-hover-light);
+  color: var(--text-primary-light);
+}
+
+.demo-admin-portal.light-mode .nav-item.active {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
 }
 
 .nav-item .icon {
@@ -104,6 +187,12 @@
   border-radius: 8px;
   margin-top: auto;
   gap: 8px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .demo-admin-footer {
+  background: rgba(51, 65, 85, 0.05);
+  border: 1px solid var(--border-light);
 }
 
 .user-info {
@@ -138,12 +227,22 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .user-name {
+  color: var(--text-primary-light);
 }
 
 .user-role {
   margin: 0;
   font-size: 12px;
   color: #94a3b8;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .user-role {
+  color: var(--text-tertiary-light);
 }
 
 .logout-btn {
@@ -167,6 +266,16 @@
   color: #fca5a5;
 }
 
+.demo-admin-portal.light-mode .logout-btn {
+  background: rgba(51, 65, 85, 0.1);
+  color: var(--text-primary-light);
+}
+
+.demo-admin-portal.light-mode .logout-btn:hover {
+  background: rgba(239, 68, 68, 0.15);
+  color: #dc2626;
+}
+
 /* Main Content Area */
 .demo-admin-content {
   flex: 1;
@@ -178,12 +287,26 @@
 /* Header */
 .demo-admin-header {
   padding: 24px 32px;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8));
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.8),
+    rgba(30, 41, 59, 0.8)
+  );
   border-bottom: 1px solid rgba(148, 163, 184, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(10px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .demo-admin-header {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(248, 250, 252, 0.9)
+  );
+  border-bottom: 1px solid var(--border-light);
 }
 
 .header-left h1 {
@@ -200,6 +323,11 @@
   margin: 0;
   font-size: 14px;
   color: #94a3b8;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .breadcrumb {
+  color: var(--text-tertiary-light);
 }
 
 .header-right {
@@ -211,10 +339,54 @@
 .user-greeting {
   font-size: 15px;
   color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .user-greeting {
+  color: var(--text-secondary-light);
 }
 
 .user-greeting strong {
   color: #e0e7ff;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .user-greeting strong {
+  color: var(--accent-primary);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(102, 126, 234, 0.15);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  color: #e0e7ff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(102, 126, 234, 0.25);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: scale(1.05);
+}
+
+.demo-admin-portal.light-mode .theme-toggle-btn {
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  color: var(--accent-primary);
+}
+
+.demo-admin-portal.light-mode .theme-toggle-btn:hover {
+  background: rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.4);
 }
 
 /* Error Banner */
@@ -230,6 +402,13 @@
   border-radius: 6px;
   color: #fca5a5;
   font-size: 14px;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .error-banner {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #dc2626;
 }
 
 .error-banner button {
@@ -241,10 +420,19 @@
   padding: 0;
   display: flex;
   align-items: center;
+  transition: color 0.3s ease;
 }
 
 .error-banner button:hover {
   color: #f87171;
+}
+
+.demo-admin-portal.light-mode .error-banner button {
+  color: #dc2626;
+}
+
+.demo-admin-portal.light-mode .error-banner button:hover {
+  color: #b91c1c;
 }
 
 /* Main Content */
@@ -252,6 +440,20 @@
   flex: 1;
   overflow-y: auto;
   padding: 32px;
+  background: linear-gradient(
+    135deg,
+    var(--bg-secondary-dark) 0%,
+    var(--bg-tertiary-dark) 100%
+  );
+  transition: background 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .demo-admin-main {
+  background: linear-gradient(
+    135deg,
+    var(--bg-secondary-light) 0%,
+    var(--bg-tertiary-light) 100%
+  );
 }
 
 /* Loading Spinner */
@@ -263,6 +465,11 @@
   gap: 16px;
   height: 100%;
   color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .loading-spinner {
+  color: var(--text-secondary-light);
 }
 
 .spinner {
@@ -289,17 +496,35 @@
 .demo-admin-sidebar::-webkit-scrollbar-track,
 .demo-admin-main::-webkit-scrollbar-track {
   background: rgba(148, 163, 184, 0.05);
+  transition: background 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .demo-admin-sidebar::-webkit-scrollbar-track,
+.demo-admin-portal.light-mode .demo-admin-main::-webkit-scrollbar-track {
+  background: rgba(51, 65, 85, 0.05);
 }
 
 .demo-admin-sidebar::-webkit-scrollbar-thumb,
 .demo-admin-main::-webkit-scrollbar-thumb {
   background: rgba(148, 163, 184, 0.2);
   border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .demo-admin-sidebar::-webkit-scrollbar-thumb,
+.demo-admin-portal.light-mode .demo-admin-main::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.15);
 }
 
 .demo-admin-sidebar::-webkit-scrollbar-thumb:hover,
 .demo-admin-main::-webkit-scrollbar-thumb:hover {
   background: rgba(148, 163, 184, 0.3);
+}
+
+.demo-admin-portal.light-mode
+  .demo-admin-sidebar::-webkit-scrollbar-thumb:hover,
+.demo-admin-portal.light-mode .demo-admin-main::-webkit-scrollbar-thumb:hover {
+  background: rgba(51, 65, 85, 0.25);
 }
 
 /* Responsive Design */

@@ -2,6 +2,11 @@
   margin-bottom: 25px;
   padding-bottom: 25px;
   border-bottom: 2px solid #e5e7eb;
+  transition: border-color 0.3s ease;
+}
+
+.tutorials-page.light-mode .language-selector {
+  border-bottom: 2px solid #e2e8f0;
 }
 
 .language-selector h3 {
@@ -9,6 +14,11 @@
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .language-selector h3 {
+  color: #1e293b;
 }
 
 .language-buttons {
@@ -42,6 +52,15 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.tutorials-page.light-mode .language-btn {
+  background: white;
+  color: #6b7280;
+}
+
+.tutorials-page.light-mode .language-btn:hover {
+  background: #f8fafc;
 }
 
 .language-icon {

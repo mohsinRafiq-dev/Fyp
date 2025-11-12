@@ -2,6 +2,11 @@
   margin-bottom: 25px;
   padding-bottom: 25px;
   border-bottom: 2px solid #e5e7eb;
+  transition: border-color 0.3s ease;
+}
+
+.tutorials-page.light-mode .concept-selector {
+  border-bottom: 2px solid #e2e8f0;
 }
 
 .concept-selector h3 {
@@ -9,12 +14,22 @@
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .concept-selector h3 {
+  color: #1e293b;
 }
 
 .concept-subtitle {
   font-size: 0.85rem;
   color: #9ca3af;
   margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .concept-subtitle {
+  color: #64748b;
 }
 
 .concepts-list {
@@ -52,12 +67,27 @@
   box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
 }
 
+.tutorials-page.light-mode .concept-btn {
+  background: white;
+  color: #6b7280;
+}
+
+.tutorials-page.light-mode .concept-btn:hover {
+  background: #f8fafc;
+}
+
 .concept-info {
   margin-top: 15px;
   padding: 12px;
   background: #f0f9ff;
   border-left: 4px solid #667eea;
   border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.tutorials-page.light-mode .concept-info {
+  background: #f0f9ff;
+  border-left: 4px solid #667eea;
 }
 
 .info-text {
@@ -65,6 +95,7 @@
   color: #0c4a6e;
   margin: 0;
   line-height: 1.4;
+  transition: color 0.3s ease;
 }
 
 @media (max-width: 480px) {

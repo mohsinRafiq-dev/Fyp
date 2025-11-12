@@ -14,12 +14,22 @@
   font-size: 24px;
   font-weight: 700;
   color: #f1f5f9;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .management-header h2 {
+  color: #1e293b;
 }
 
 .management-header p {
   margin: 0;
   font-size: 14px;
   color: #94a3b8;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .management-header p {
+  color: #64748b;
 }
 
 /* Tutorials Grid */
@@ -33,7 +43,11 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
   border: 1px solid rgba(102, 126, 234, 0.2);
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -43,9 +57,32 @@
 
 .tutorial-card:hover {
   transform: translateY(-4px);
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.15),
+    rgba(118, 75, 162, 0.15)
+  );
   border-color: rgba(102, 126, 234, 0.3);
   box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+}
+
+.demo-admin-portal.light-mode .tutorial-card {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.08),
+    rgba(118, 75, 162, 0.08)
+  );
+  border: 1px solid rgba(102, 126, 234, 0.15);
+}
+
+.demo-admin-portal.light-mode .tutorial-card:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.12),
+    rgba(118, 75, 162, 0.12)
+  );
+  border-color: rgba(102, 126, 234, 0.25);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.1);
 }
 
 .card-header {
@@ -63,6 +100,11 @@
   color: #f1f5f9;
   flex: 1;
   line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .card-header h3 {
+  color: #1e293b;
 }
 
 .card-header .delete-btn {
@@ -81,6 +123,18 @@
   background: rgba(239, 68, 68, 0.2);
   border-color: rgba(239, 68, 68, 0.5);
   color: #f87171;
+}
+
+.demo-admin-portal.light-mode .card-header .delete-btn {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #dc2626;
+}
+
+.demo-admin-portal.light-mode .card-header .delete-btn:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #b91c1c;
 }
 
 /* Card Meta */
@@ -103,6 +157,13 @@
   font-weight: 500;
   color: #cbd5e1;
   white-space: nowrap;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .language-badge {
+  background: rgba(51, 65, 85, 0.05);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  color: #475569;
 }
 
 .difficulty-badge {
@@ -116,6 +177,7 @@
   color: #fff;
   text-transform: capitalize;
   white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 /* Card Content */
@@ -128,12 +190,22 @@
   font-size: 13px;
   color: #cbd5e1;
   line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .concept {
+  color: #475569;
 }
 
 .created-date {
   margin: 0;
   font-size: 12px;
   color: #94a3b8;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .created-date {
+  color: #64748b;
 }
 
 /* Pagination */
@@ -167,6 +239,17 @@
   color: #fff;
 }
 
+.demo-admin-portal.light-mode .page-btn {
+  background: rgba(51, 65, 85, 0.05);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  color: #475569;
+}
+
+.demo-admin-portal.light-mode .page-btn:hover {
+  background: rgba(51, 65, 85, 0.1);
+  border-color: rgba(51, 65, 85, 0.3);
+}
+
 /* No Data */
 .no-data {
   display: flex;
@@ -175,6 +258,11 @@
   min-height: 300px;
   color: #94a3b8;
   font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .no-data {
+  color: #64748b;
 }
 
 /* Loading State */
@@ -185,6 +273,11 @@
   min-height: 400px;
   color: #cbd5e1;
   font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.demo-admin-portal.light-mode .demo-loading {
+  color: #475569;
 }
 
 /* Responsive */

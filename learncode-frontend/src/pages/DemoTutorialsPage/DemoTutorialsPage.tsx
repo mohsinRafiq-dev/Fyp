@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
-import { 
-  fetchMainConcepts, 
+import { useTheme } from "../../contexts/ThemeContext";
+import {
+  fetchMainConcepts,
   fetchTutorialsByLanguageAndConcept,
   type TutorialItem,
   type MainConcepts,
@@ -18,7 +19,10 @@ import TutorialViewer from "./Components/DemoTutorialViewer";
 const TutorialsPage: React.FC = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>(LANGUAGES.PYTHON);
+  const { isDark } = useTheme();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(
+    LANGUAGES.PYTHON
+  );
   const [selectedConcept, setSelectedConcept] = useState<string>("");
   const [mainConcepts, setMainConcepts] = useState<MainConcepts>({
     python: [],
@@ -34,9 +38,9 @@ const TutorialsPage: React.FC = () => {
 
   // Check suspension status
   useEffect(() => {
-    if (user?.accountStatus === 'suspended') {
+    if (user?.accountStatus === "suspended") {
       logout();
-      navigate('/signin?error=account_suspended');
+      navigate("/signin?error=account_suspended");
     }
   }, [user, logout, navigate]);
 
@@ -58,7 +62,10 @@ const TutorialsPage: React.FC = () => {
     const loadTutorials = async () => {
       setLoading(true);
       try {
-        const data = await fetchTutorialsByLanguageAndConcept(selectedLanguage, selectedConcept);
+        const data = await fetchTutorialsByLanguageAndConcept(
+          selectedLanguage,
+          selectedConcept
+        );
         setTutorials(data);
 
         // Set first tutorial as selected if available
@@ -82,7 +89,9 @@ const TutorialsPage: React.FC = () => {
     const fetchSavedTutorials = async () => {
       try {
         const response = await api.get("/tutorials/user/saved");
-        setSavedTutorials(response.data?.data?.map((t: TutorialItem) => t._id) || []);
+        setSavedTutorials(
+          response.data?.data?.map((t: TutorialItem) => t._id) || []
+        );
       } catch (error) {
         console.error("Error fetching saved tutorials:", error);
       }
@@ -118,7 +127,7 @@ const TutorialsPage: React.FC = () => {
   };
 
   return (
-    <div className="tutorials-page">
+    <div className={`tutorials-page ${isDark ? "dark-mode" : "light-mode"}`}>
       <div className="tutorials-header">
         <h1>📚 Learning Tutorials</h1>
         <p>

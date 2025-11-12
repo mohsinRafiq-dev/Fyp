@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
+import { useTheme } from "../../contexts/ThemeContext";
 import DemoAdminDashboard from "./Components/DemoAdminDashboard";
 import DemoUserManagement from "./Components/DemoUserManagement";
 import DemoTutorialManagement from "./Components/DemoTutorialManagement";
@@ -10,6 +11,7 @@ import "./DemoAdminPortal.css";
 function DemoAdminPortal() {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
+  const { isDark, toggleTheme } = useTheme();
   const [activeTab, setActiveTab] = useState("dashboard");
   const [loading] = useState(false);
   const [error, setError] = useState("");
@@ -24,7 +26,7 @@ function DemoAdminPortal() {
   };
 
   return (
-    <div className="demo-admin-portal">
+    <div className={`demo-admin-portal ${!isDark ? "light-mode" : ""}`}>
       {/* Sidebar */}
       <aside className="demo-admin-sidebar">
         <div className="demo-admin-logo">
@@ -91,6 +93,14 @@ function DemoAdminPortal() {
             <div className="user-greeting">
               Welcome, <strong>{user?.name}</strong>! 👋
             </div>
+            <button
+              className="theme-toggle-btn"
+              onClick={toggleTheme}
+              title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              aria-label="Toggle theme"
+            >
+              {isDark ? "☀️" : "🌙"}
+            </button>
           </div>
         </header>
 
