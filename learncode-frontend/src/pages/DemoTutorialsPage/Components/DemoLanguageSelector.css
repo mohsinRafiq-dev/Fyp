@@ -1,24 +1,24 @@
 .language-selector {
   margin-bottom: 25px;
   padding-bottom: 25px;
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 2px solid #334155;
   transition: border-color 0.3s ease;
 }
 
 .tutorials-page.light-mode .language-selector {
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid #E5E7EB;
 }
 
 .language-selector h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #F9FAFB;
   margin-bottom: 12px;
   transition: color 0.3s ease;
 }
 
 .tutorials-page.light-mode .language-selector h3 {
-  color: #1e293b;
+  color: #1E1E2D;
 }
 
 .language-buttons {
@@ -32,35 +32,39 @@
   align-items: center;
   gap: 10px;
   padding: 12px 16px;
-  border: 2px solid #e5e7eb;
-  background: white;
+  border: 2px solid #475569;
+  background: #334155;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
-  color: #6b7280;
+  color: #94A3B8;
 }
 
 .language-btn:hover {
-  border-color: #667eea;
-  background: #f3f4f6;
+  border-color: #818CF8;
+  background: #475569;
+  color: #A5B4FC;
   transform: translateX(4px);
 }
 
 .language-btn.active {
-  border-color: #667eea;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #818CF8;
+  background: linear-gradient(135deg, #818CF8 0%, #A5B4FC 100%);
   color: white;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.4);
 }
 
 .tutorials-page.light-mode .language-btn {
-  background: white;
-  color: #6b7280;
+  background: #FFFFFF;
+  color: #6B7280;
+  border-color: #E5E7EB;
 }
 
 .tutorials-page.light-mode .language-btn:hover {
-  background: #f8fafc;
+  background: #F9FAFB;
+  border-color: #6C63FF;
+  color: #6C63FF;
 }
 
 .language-icon {

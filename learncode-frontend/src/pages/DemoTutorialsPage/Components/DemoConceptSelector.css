@@ -1,35 +1,35 @@
 .concept-selector {
   margin-bottom: 25px;
   padding-bottom: 25px;
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 2px solid #334155;
   transition: border-color 0.3s ease;
 }
 
 .tutorials-page.light-mode .concept-selector {
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid #E5E7EB;
 }
 
 .concept-selector h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #F9FAFB;
   margin-bottom: 4px;
   transition: color 0.3s ease;
 }
 
 .tutorials-page.light-mode .concept-selector h3 {
-  color: #1e293b;
+  color: #1E1E2D;
 }
 
 .concept-subtitle {
   font-size: 0.85rem;
-  color: #9ca3af;
+  color: #71717A;
   margin-bottom: 12px;
   transition: color 0.3s ease;
 }
 
 .tutorials-page.light-mode .concept-subtitle {
-  color: #64748b;
+  color: #6B7280;
 }
 
 .concepts-list {
@@ -43,59 +43,66 @@
   align-items: center;
   gap: 8px;
   padding: 10px 12px;
-  border: 2px solid #e5e7eb;
-  background: white;
+  border: 2px solid #475569;
+  background: #334155;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
-  color: #6b7280;
+  color: #94A3B8;
   font-size: 0.95rem;
   text-align: left;
 }
 
 .concept-btn:hover {
-  border-color: #764ba2;
-  background: #f9f5ff;
+  border-color: #A5B4FC;
+  background: #475569;
+  color: #C7D2FE;
   transform: translateX(4px);
 }
 
 .concept-btn.active {
-  border-color: #764ba2;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #A5B4FC;
+  background: linear-gradient(135deg, #818CF8 0%, #A5B4FC 100%);
   color: white;
-  box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);
 }
 
 .tutorials-page.light-mode .concept-btn {
-  background: white;
-  color: #6b7280;
+  background: #FFFFFF;
+  color: #6B7280;
+  border-color: #E5E7EB;
 }
 
 .tutorials-page.light-mode .concept-btn:hover {
-  background: #f8fafc;
+  background: #F9FAFB;
+  border-color: #8B84F7;
 }
 
 .concept-info {
   margin-top: 15px;
   padding: 12px;
-  background: #f0f9ff;
-  border-left: 4px solid #667eea;
+  background: #475569;
+  border-left: 4px solid #818CF8;
   border-radius: 4px;
   transition: background 0.3s ease;
 }
 
 .tutorials-page.light-mode .concept-info {
-  background: #f0f9ff;
-  border-left: 4px solid #667eea;
+  background: #F0F9FF;
+  border-left: 4px solid #6C63FF;
 }
 
 .info-text {
   font-size: 0.85rem;
-  color: #0c4a6e;
+  color: #A5B4FC;
   margin: 0;
   line-height: 1.4;
   transition: color 0.3s ease;
+}
+
+.tutorials-page.light-mode .info-text {
+  color: #0C4A6E;
 }
 
 @media (max-width: 480px) {
