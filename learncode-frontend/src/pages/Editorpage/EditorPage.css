@@ -1,0 +1,381 @@
+.editor-page {
+  display: flex;
+  height: 100vh;
+  background: #0f172a;
+  transition: background 0.3s ease;
+}
+
+.editor-page.light-mode {
+  background: #f8f9fb;
+}
+
+.editor-page .flex-3 {
+  flex: 3;
+}
+
+.editor-page .flex-2 {
+  flex: 2;
+}
+
+.editor-page .flex-1 {
+  flex: 1;
+}
+
+/* Editor Header - Dark Mode */
+.editor-page.dark-mode .editor-header {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.editor-page.dark-mode .editor-header select {
+  background: #334155;
+  color: #f9fafb;
+  border-color: #475569;
+}
+
+.editor-page.dark-mode .editor-header select:focus {
+  outline: 2px solid #818cf8;
+  outline-offset: 2px;
+}
+
+.editor-page.dark-mode .editor-header select option {
+  background: #1e293b;
+  color: #f9fafb;
+}
+
+.editor-page.dark-mode .run-btn {
+  background: #818cf8;
+  color: white;
+}
+
+.editor-page.dark-mode .run-btn:hover:not(:disabled) {
+  background: #a5b4fc;
+}
+
+.editor-page.dark-mode .reset-btn {
+  background: #475569;
+  color: #f9fafb;
+}
+
+.editor-page.dark-mode .reset-btn:hover {
+  background: #64748b;
+}
+
+/* Editor Header - Light Mode */
+.editor-page.light-mode .editor-header {
+  background: #ffffff;
+  border-color: #e5e7eb;
+}
+
+.editor-page.light-mode .editor-header select {
+  background: #ffffff;
+  color: #1e1e2d;
+  border-color: #e5e7eb;
+}
+
+.editor-page.light-mode .editor-header select:focus {
+  outline: 2px solid #6c63ff;
+  outline-offset: 2px;
+}
+
+.editor-page.light-mode .editor-header select option {
+  background: #ffffff;
+  color: #1e1e2d;
+}
+
+.editor-page.light-mode .run-btn {
+  background: #6c63ff;
+  color: white;
+}
+
+.editor-page.light-mode .run-btn:hover:not(:disabled) {
+  background: #5a54e3;
+}
+
+.editor-page.light-mode .reset-btn {
+  background: #e5e7eb;
+  color: #1e1e2d;
+}
+
+.editor-page.light-mode .reset-btn:hover {
+  background: #d1d5db;
+}
+
+/* Editor Container - Dark Mode */
+.editor-page.dark-mode .editor-container {
+  background: #0f172a;
+}
+
+.editor-page.dark-mode .monaco-editor {
+  background: #1e293b;
+  color: #f9fafb;
+}
+
+/* Editor Container - Light Mode */
+.editor-page.light-mode .editor-container {
+  background: #f8fafc;
+}
+
+.editor-page.light-mode .monaco-editor {
+  background: #ffffff;
+  color: #1e293b;
+}
+
+/* Output/Input Panel - Dark Mode */
+.editor-page.dark-mode .output-panel {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.editor-page.dark-mode .tab-btn {
+  color: #71717a;
+}
+
+.editor-page.dark-mode .tab-btn.active {
+  color: #f9fafb;
+  border-color: #818cf8;
+}
+
+.editor-page.dark-mode .tab-btn:hover {
+  color: #94a3b8;
+}
+
+.editor-page.dark-mode .panel-content {
+  background: #1e293b;
+  color: #f9fafb;
+}
+
+.editor-page.dark-mode .output-text {
+  color: #a5b4fc;
+}
+
+.editor-page.dark-mode .input-textarea {
+  background: #1e293b;
+  color: #f9fafb;
+  border-color: #334155;
+}
+
+.editor-page.dark-mode .input-textarea:focus {
+  outline: 1px solid #818cf8;
+  outline-offset: 1px;
+}
+
+.editor-page.dark-mode .input-textarea::placeholder {
+  color: #71717a;
+}
+
+.editor-page.dark-mode .icon-btn {
+  color: #71717a;
+}
+
+.editor-page.dark-mode .icon-btn:hover {
+  color: #a5b4fc;
+}
+
+/* Output/Input Panel - Light Mode */
+.editor-page.light-mode .output-panel {
+  background: #f8f9fb;
+  border-color: #e5e7eb;
+}
+
+.editor-page.light-mode .tab-btn {
+  color: #6b7280;
+}
+
+.editor-page.light-mode .tab-btn.active {
+  color: #1e1e2d;
+  border-color: #6c63ff;
+}
+
+.editor-page.light-mode .tab-btn:hover {
+  color: #1e1e2d;
+}
+
+.editor-page.light-mode .panel-content {
+  background: #ffffff;
+  color: #1e1e2d;
+}
+
+.editor-page.light-mode .output-text {
+  color: #1e1e2d;
+}
+
+.editor-page.light-mode .input-textarea {
+  background: #ffffff;
+  color: #1e1e2d;
+  border-color: #e5e7eb;
+}
+
+.editor-page.light-mode .input-textarea:focus {
+  outline: 1px solid #6c63ff;
+  outline-offset: 1px;
+}
+
+.editor-page.light-mode .input-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.editor-page.light-mode .icon-btn {
+  color: #6b7280;
+}
+
+.editor-page.light-mode .icon-btn:hover {
+  color: #1e1e2d;
+}
+
+/* AI Assistant Panel - Dark Mode */
+.editor-page.dark-mode .ai-panel {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.editor-page.dark-mode .ai-header {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f9fafb;
+}
+
+.editor-page.dark-mode .ai-header-btn {
+  color: #71717a;
+}
+
+.editor-page.dark-mode .ai-header-btn:hover {
+  color: #a5b4fc;
+}
+
+.editor-page.dark-mode .chat-area {
+  background: #0f172a;
+}
+
+.editor-page.dark-mode .ai-message {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f9fafb;
+}
+
+.editor-page.dark-mode .ai-input-box {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.editor-page.dark-mode .ai-input-box:focus-within {
+  outline: 2px solid #818cf8;
+  outline-offset: 2px;
+}
+
+.editor-page.dark-mode .ai-input {
+  background: transparent;
+  color: #f9fafb;
+}
+
+.editor-page.dark-mode .ai-input::placeholder {
+  color: #71717a;
+}
+
+.editor-page.dark-mode .ai-send-btn {
+  color: #818cf8;
+}
+
+.editor-page.dark-mode .ai-send-btn:hover {
+  color: #a5b4fc;
+}
+
+/* AI Assistant Panel - Light Mode */
+.editor-page.light-mode .ai-panel {
+  background: #f8f9fb;
+  border-color: #e5e7eb;
+}
+
+.editor-page.light-mode .ai-header {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  color: #1e1e2d;
+}
+
+.editor-page.light-mode .ai-header-btn {
+  color: #6b7280;
+}
+
+.editor-page.light-mode .ai-header-btn:hover {
+  color: #1e1e2d;
+}
+
+.editor-page.light-mode .chat-area {
+  background: #f8f9fb;
+}
+
+.editor-page.light-mode .ai-message {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  color: #1e1e2d;
+}
+
+.editor-page.light-mode .ai-input-box {
+  background: #ffffff;
+  border-color: #e5e7eb;
+}
+
+.editor-page.light-mode .ai-input-box:focus-within {
+  outline: 2px solid #6c63ff;
+  outline-offset: 2px;
+}
+
+.editor-page.light-mode .ai-input {
+  background: transparent;
+  color: #1e1e2d;
+}
+
+.editor-page.light-mode .ai-input::placeholder {
+  color: #9ca3af;
+}
+
+.editor-page.light-mode .ai-send-btn {
+  color: #6c63ff;
+}
+
+.editor-page.light-mode .ai-send-btn:hover {
+  color: #5a54e3;
+}
+
+/* Scrollbar Styling */
+.editor-page.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.editor-page.dark-mode ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.editor-page.dark-mode ::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+.editor-page.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+.editor-page.light-mode ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.editor-page.light-mode ::-webkit-scrollbar-track {
+  background: #f8f9fb;
+}
+
+.editor-page.light-mode ::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.editor-page.light-mode ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Transitions */
+.editor-page * {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}

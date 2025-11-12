@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import Editor from "@monaco-editor/react";
+import { useTheme } from "../../../contexts/ThemeContext";
 import {
   handleLanguageChange,
   languageOptions,
@@ -16,6 +17,8 @@ export default function CodeEditor({
   initialCode,
   initialLanguage,
 }: CodeEditorProps) {
+  const { isDark } = useTheme();
+
   // --- Your Existing State and Refs ---
   const [code, setCode] = useState(
     initialCode || getDefaultCodeForLanguage(initialLanguage || "python")
@@ -43,7 +46,7 @@ export default function CodeEditor({
 
       if (!input.trim() && codeNeedsInput) {
         setOutput(
-          "⚠️ Your code requires input!\n\nPlease provide input in the 'Input' tab.\nEach input should be on a separate line.\n\nExample:\nAlice\n25",
+          "⚠️ Your code requires input!\n\nPlease provide input in the 'Input' tab.\nEach input should be on a separate line.\n\nExample:\nAlice\n25"
         );
         setLoading(false);
         return;
@@ -62,7 +65,7 @@ export default function CodeEditor({
       };
       setOutput(
         executionError?.response?.data?.message ||
-          "Error: Failed to execute code. Please try again.",
+          "Error: Failed to execute code. Please try again."
       );
     } finally {
       setLoading(false);
@@ -76,13 +79,13 @@ export default function CodeEditor({
 
   return (
     <div className="flex flex-3 flex-col h-screen">
-      <div className="flex flex-col flex-2 bg-gray-50 overflow-hidden">
+      <div className="flex flex-col flex-2 editor-container overflow-hidden">
         {/* Editor Header */}
-        <div className="flex items-center justify-between px-4 py-2 bg-white border border-gray-300">
+        <div className="editor-header flex items-center justify-between px-4 py-2 border">
           <select
             value={language}
             onChange={(e) => changeLanguage(e.target.value)}
-            className="px-3 py-1 rounded bg-white text-gray-900 border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-1 rounded text-sm border focus:outline-none transition-colors"
           >
             {languageOptions.map((lang) => (
               <option key={lang.id} value={lang.id}>
@@ -94,13 +97,13 @@ export default function CodeEditor({
             <button
               onClick={runCode}
               disabled={loading}
-              className="px-3 py-1 rounded bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="run-btn px-3 py-1 rounded text-white text-sm font-medium hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {loading ? "⏳ Running..." : "▶ Run"}
             </button>
             <button
               onClick={() => setCode(getDefaultCodeForLanguage(language))}
-              className="px-3 py-1 rounded bg-gray-200 text-gray-800 text-sm font-medium hover:bg-gray-300"
+              className="reset-btn px-3 py-1 rounded text-sm font-medium hover:opacity-90 transition-colors"
             >
               Reset
             </button>
@@ -108,6 +111,7 @@ export default function CodeEditor({
         </div>
         <Editor
           height="100%"
+          theme={isDark ? "vs-dark" : "vs"}
           language={language === "cpp" ? "cpp" : language}
           value={code}
           onChange={(value) => setCode(value || "")}
@@ -116,27 +120,23 @@ export default function CodeEditor({
       </div>
 
       {/* Bottom: Output/Input Panel */}
-      <div className="flex flex-col flex-1 bg-gray-50 border-t border-gray-300">
+      <div className="output-panel flex flex-col flex-1 border-t">
         {/* Tab Headers */}
-        <div className="flex items-center justify-between px-4 border-b border-gray-300">
+        <div className="flex items-center justify-between px-4 border-b">
           <div className="flex gap-1">
             <button
               onClick={() => setActiveTab("output")}
-              className={`px-4 py-2 text-sm ${
-                activeTab === "output"
-                  ? "text-gray-900 border-b-2 border-blue-500"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
+              className={`tab-btn px-4 py-2 text-sm ${
+                activeTab === "output" ? "active" : ""
+              } transition-colors`}
             >
               Output
             </button>
             <button
               onClick={() => setActiveTab("input")}
-              className={`px-4 py-2 text-sm ${
-                activeTab === "input"
-                  ? "text-gray-900 border-b-2 border-blue-500"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
+              className={`tab-btn px-4 py-2 text-sm ${
+                activeTab === "input" ? "active" : ""
+              } transition-colors`}
             >
               Input
             </button>
@@ -146,14 +146,14 @@ export default function CodeEditor({
               <button
                 onClick={() => navigator.clipboard.writeText(output)}
                 title="Copy"
-                className="text-gray-500 hover:text-gray-800"
+                className="icon-btn hover:opacity-80 transition-colors"
               >
                 📋
               </button>
               <button
                 onClick={() => setOutput("")}
                 title="Clear"
-                className="text-gray-500 hover:text-gray-800"
+                className="icon-btn hover:opacity-80 transition-colors"
               >
                 🗑️
               </button>
@@ -161,9 +161,9 @@ export default function CodeEditor({
           )}
         </div>
         {/* Tab Content */}
-        <div className="flex-1 p-3 overflow-auto bg-white">
+        <div className="panel-content flex-1 p-3 overflow-auto">
           {activeTab === "output" ? (
-            <pre className="text-sm whitespace-pre-wrap font-mono text-gray-800">
+            <pre className="output-text text-sm whitespace-pre-wrap font-mono">
               {output || "Your code's output will be displayed here."}
               <div ref={outputEndRef} />
             </pre>
@@ -171,7 +171,7 @@ export default function CodeEditor({
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="w-full h-full p-2 rounded bg-white text-gray-900 border border-gray-300 resize-none text-sm font-mono focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="input-textarea w-full h-full p-2 rounded border resize-none text-sm font-mono focus:outline-none transition-colors"
               placeholder="Provide all inputs here (one per line)..."
             />
           )}

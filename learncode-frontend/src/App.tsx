@@ -3,7 +3,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { ProtectedRoute } from "./routes";
 import HomePage from "./pages/HomePage/HomePage";
-import EditorPage from "./pages/Editorpage/EditorPage";
+import EditorPage from "./pages/EditorPage/EditorPage";
 import SigninPage from "./pages/SigninPage/SigninPage";
 import SignupPage from "./pages/SignupScreen/SignupScreen";
 import OAuthSuccessPage from "./pages/OAuthSuccess/OAuthSuccess";
